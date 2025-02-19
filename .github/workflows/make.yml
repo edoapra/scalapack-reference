@@ -52,7 +52,7 @@ jobs:
     - name: Run examples
       working-directory: ${{github.workspace}}/EXAMPLE
       run: |
-        mpirun -n 4 ./xsscaex
-        mpirun -n 4 ./xdscaex
-        mpirun -n 4 ./xcscaex
-        mpirun -n 4 ./xzscaex
+        mpirun --oversubscribe  -n 4 ./xsscaex
+        mpirun --oversubscribe -n 4 ./xdscaex
+        mpirun --oversubscribe -n 4 ./xcscaex
+        mpirun --oversubscribe -n 4 ./xzscaex
