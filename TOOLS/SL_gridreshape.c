@@ -8,7 +8,6 @@
 #include "../PBLAS/SRC/PBblacs.h"
 Int SL_Cgridreshape(Int ctxt, Int pstart, Int row_major_in, Int row_major_out, Int P, Int Q)
 {
-   Int Cblacs_pnum();
    Int nctxt, P0, Q0, Np, i, *g;
 
    Cblacs_gridinfo(ctxt, &P0, &Q0, &i, &Np);
