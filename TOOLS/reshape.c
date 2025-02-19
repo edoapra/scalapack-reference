@@ -12,10 +12,6 @@ column major (2) in the input and output grids */
 
    /** called subprograms **/
    void proc_inc();
-   void Cblacs_gridinfo();
-   Int Cblacs_pnum();
-   void Cblacs_get();
-   void Cblacs_gridmap();
 
    /** variables **/
    Int i, j;
