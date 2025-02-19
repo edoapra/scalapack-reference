@@ -3,7 +3,7 @@
 #ifndef Int
 #define Int int
 #endif
-
+#include "../PBLAS/SRC/PBblacs.h"
 void Creshape( Int context_in, Int major_in, Int* context_out, Int major_out,
                     Int first_proc, Int nprow_new, Int npcol_new )
 /* major in, major out represent whether processors go row major (1) or
