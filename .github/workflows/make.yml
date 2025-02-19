@@ -45,7 +45,7 @@ jobs:
     - name: Build ScaLAPACK
       run: |
         cp SLmake.inc.example SLmake.inc
-        make -j1 -l0.001 lib
+        make -j3 lib
         make all
         
     - name: Run examples

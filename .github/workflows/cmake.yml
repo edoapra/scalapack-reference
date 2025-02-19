@@ -73,8 +73,12 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: |
         ctest -D ExperimentalTest --schedule-random --output-on-failure --timeout 180
+        
+    - name: Submit
+      if: ${{ github.actor == 'Reference-ScaLAPACK' }}
+      working-directory: ${{github.workspace}}/build
+      run: |
         ctest -D ExperimentalSubmit
         
     - name: Install
-      if: ${{ github.actor == 'Reference-ScaLAPACK' }}
       run: cmake --build build --target install
