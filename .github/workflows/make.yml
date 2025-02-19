@@ -32,15 +32,20 @@ jobs:
     steps:
 
     - name: Checkout ScaLAPACK
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Setup MPI
-      uses: mpi4py/setup-mpi@v1
+      uses: mpi4py/setup-mpi@v4
+
+    - name: Install BLAS and LAPACK
+      run: |
+        sudo apt -y update
+        sudo apt -y install libblas-dev liblapack-dev
 
     - name: Build ScaLAPACK
       run: |
         cp SLmake.inc.example SLmake.inc
-        make lib
+        make -j lib
         make all
         
     - name: Run examples
