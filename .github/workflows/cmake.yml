@@ -76,5 +76,5 @@ jobs:
         ctest -D ExperimentalSubmit
         
     - name: Install
-      if: ${{ github.actor == "Reference-ScaLAPACK" }}
+      if: ${{ github.actor == 'Reference-ScaLAPACK' }}
       run: cmake --build build --target install
