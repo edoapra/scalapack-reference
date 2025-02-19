@@ -40,8 +40,8 @@ jobs:
     - name: Build ScaLAPACK
       run: |
         cp SLmake.inc.example SLmake.inc
-        make --silent -j lib
-        make --silent all
+        make lib
+        make all
         
     - name: Run examples
       working-directory: ${{github.workspace}}/EXAMPLE
