@@ -46,7 +46,7 @@ jobs:
     - name: Build ScaLAPACK
       run: |
         cp SLmake.inc.example SLmake.inc
-        make -j1 -l0.001 lib
+        make -j1 -l0.001 FCFLAGS=-fallow-argument-mismatch lib
         make all
         
     - name: Run examples
